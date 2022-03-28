@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.example.helloandroid3">
+=======
+    package="com.example.myapplicationweek2">
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+<<<<<<< HEAD
         android:label="@string/app_name"
+=======
+        android:label="좀 그럴듯한 앱"
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         <activity
+<<<<<<< HEAD
             android:name="com.example.hiandroid.MainActivity"
+=======
+            android:name=".MainActivity"
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

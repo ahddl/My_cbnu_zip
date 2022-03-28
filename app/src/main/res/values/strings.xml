@@ -1,3 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">HiAndroid</string>
+=======
+    <string name="app_name">My Applicationweek2</string>
+    <string name="strBtn1">글자 나타내기</string>
+    <string name="strBtn2">홈페이지 열기</string>
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
 </resources>
