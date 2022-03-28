@@ -1,8 +1,17 @@
 <resources>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <string name="app_name">BaseApp</string>
     <string name="strBtn1">버튼입니다</string>
 =======
     <string name="app_name">HiAndroid</string>
 >>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
+=======
+    <string name="app_name">HiAndroid</string>
+=======
+    <string name="app_name">My Applicationweek2</string>
+    <string name="strBtn1">글자 나타내기</string>
+    <string name="strBtn2">홈페이지 열기</string>
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
+>>>>>>> b01832d05fbed150ad825cbde19cf4bc99b9aff5
 </resources>
