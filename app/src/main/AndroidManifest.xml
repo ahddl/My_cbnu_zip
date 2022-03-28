@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.example.baseapp">
+=======
+    package="com.example.helloandroid3">
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
 
     <application
         android:allowBackup="true"
@@ -10,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         <activity
+<<<<<<< HEAD
             android:name=".MainActivity"
+=======
+            android:name="com.example.hiandroid.MainActivity"
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

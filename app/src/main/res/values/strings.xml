@@ -1,4 +1,8 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">BaseApp</string>
     <string name="strBtn1">버튼입니다</string>
+=======
+    <string name="app_name">HiAndroid</string>
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
 </resources>

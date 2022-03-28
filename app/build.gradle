@@ -6,7 +6,11 @@ android {
     compileSdk 31
 
     defaultConfig {
+<<<<<<< HEAD
         applicationId "com.example.baseapp"
+=======
+        applicationId "com.example.hiandroid"
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
         minSdk 21
         targetSdk 31
         versionCode 1
