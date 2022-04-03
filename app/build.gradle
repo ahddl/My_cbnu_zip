@@ -6,7 +6,26 @@ android {
     compileSdk 31
 
     defaultConfig {
+<<<<<<< HEAD
         applicationId "com.cookandroid.project4_1"
+=======
+<<<<<<< HEAD
+        applicationId "com.cookandroid.week4mission"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        applicationId "com.example.baseapp"
+=======
+        applicationId "com.example.hiandroid"
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
+=======
+        applicationId "com.example.hiandroid"
+=======
+        applicationId "com.example.myapplicationweek2"
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
+>>>>>>> b01832d05fbed150ad825cbde19cf4bc99b9aff5
+>>>>>>> 3540d41497c8a64cb6895da7196b042d9d0cbc34
+>>>>>>> 6e7807cdae8a3d17d21d7211f59176dfcd770ad4
         minSdk 21
         targetSdk 31
         versionCode 1
