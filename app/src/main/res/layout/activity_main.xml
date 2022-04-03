@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -75,3 +76,333 @@
 
 
 </LinearLayout>
+=======
+<<<<<<< HEAD
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+    <EditText
+        android:id="@+id/Edit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="숫자1"
+        />
+
+    <EditText
+        android:id="@+id/Edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="숫자2"
+        />
+
+    <Button
+        android:id="@+id/BtnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="더하기"
+        />
+
+    <Button
+        android:id="@+id/BtnSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="빼기"
+         />
+
+    <Button
+        android:id="@+id/BtnMul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="곱하기"
+        />
+
+    <Button
+        android:id="@+id/BtnDiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="나누기"
+        tools:layout_editor_absoluteX="-19dp"
+        tools:layout_editor_absoluteY="481dp" />
+
+    <TextView
+        android:id="@+id/TextResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="계산 결과 : "
+        android:textColor="#FF0000"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="580dp" />
+
+    </LinearLayout>
+=======
+<<<<<<< HEAD
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center"
+tools:context=".MainActivity">
+
+
+<LinearLayout
+    android:layout_width="300dp"
+    android:layout_height="300dp">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgUp"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:src="@drawable/dog_30" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnChange1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:text="▲"/>
+    <Button
+        android:id="@+id/btnChange2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:text="▼"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="298dp"
+        android:layout_height="297dp">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="283dp"
+            android:layout_weight="1"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgDown"
+                    android:layout_width="238dp"
+                    android:layout_height="188dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
+=======
+<<<<<<< HEAD
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/button1"
+    android:text="@string/strBtn1"
+
+    ></Button>
+
+
+</LinearLayout>
+=======
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+<<<<<<< HEAD
+    tools:context="com.example.hiandroid.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="89dp"
+        android:text="CheckBox"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:text="Switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+=======
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/myEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="32dp"
+
+        android:layout_marginEnd="9dp"
+        android:ems="10"
+        android:hint="글자 또는 URL을 입력하시오"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="9dp"
+
+        android:layout_marginEnd="9dp"
+        android:text="@string/strBtn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myEdit"></Button>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="9dp"
+
+
+        android:layout_marginEnd="9dp"
+        android:text="@string/strBtn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1"></Button>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="192dp"
+            android:text="12.0(R)"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dog(S)"
+            app:layout_constraintStart_toStartOf="@+id/radioButton"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="115dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="2dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:srcCompat="@drawable/dog_22" />
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
+>>>>>>> 3540d41497c8a64cb6895da7196b042d9d0cbc34
+>>>>>>> 6e7807cdae8a3d17d21d7211f59176dfcd770ad4
+>>>>>>> c8428889a0ea65fa4eee364f31e7b3184243bc87
