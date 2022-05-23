@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="390dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tip3_1"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="10dp"
+        android:text="검사수수료는 부가세 포함이며, 재검사기간내 재검사수수료는 면제입니다.
+        \n검사수수료 및 재검사수수료는 자동차관리법 제76조(수수료)에 따라 정하도록 되어있으며, 변경될 수 있습니다.
+        \n검사수수료는 한국교통안전공단 기준 금액이며, 지정정비사업자는 공단과 다를 수 있습니다." />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="10dp"
+        android:text="(출처-한국교통안전공단)" />
+
+
+</LinearLayout>

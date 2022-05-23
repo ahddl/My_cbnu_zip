@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="15dp"
+        android:text="비탈진 좁은 길에서 운전하다가 앞에 다른 차를 마주치면 누가 양보를 해야 할까요?
+서로 마주보고 있는 상황에서는 올라가는 차량이 먼저 양보를 해야 합니다." />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="390dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tip4_1"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="10dp"
+        android:text="(출처-한국교통안전공단)" />
+
+</LinearLayout>

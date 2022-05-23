@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="15dp"
+        android:text="▶ 자동차 검사 목적?
+        \n운행 중인 자동차의 안전도 적합여부를 판별하여 교통사고 예방에 기여하고, 소음 및 배출가스로부터 환경오염을 예방합니다.
+        \n또한 자동차의 동일성 확인을 통해 국민의 재산권을 보호하고, 책임보험 가입여부 확인 및 불법 튜닝 여부를 확인하여 주행 질서 확립에 기여합니다." />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="390dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tip2_1"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="10dp"
+        android:text="(출처-한국교통안전공단)" />
+
+
+</LinearLayout>
