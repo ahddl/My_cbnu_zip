@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="620dp"
+        android:background="@drawable/view_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="620dp"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="등록한 날짜 및 시간 나타나게." />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="섭취한 음식 메뉴"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="쌀밥, 미역국, 김치, 빵\n(일단 예시로 text넣어둠)"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="섭취한 영양소"
+            android:textSize="24dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="탄수화물, 단백질, 지방\n(일단 예시로 text넣어둠)"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MEMO"
+            android:textSize="24dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아까 기록한 메모내용\n(일단 예시로 text넣어둠)\n(스크롤확인용)\n(스크롤확인용)\n(스크롤확인용)\n(스크롤확인용)\n(스크롤확인용)"
+            android:textSize="20dp"/>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/camerabutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/baseline_photo_camera_24"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+</LinearLayout>
