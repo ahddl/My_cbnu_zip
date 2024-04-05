@@ -39,7 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider
+        <!--<provider
             android:authorities="${applicationId}"
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
@@ -47,7 +47,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/external"/>
-        </provider>
+        </provider>-->
     </application>
 
 </manifest>

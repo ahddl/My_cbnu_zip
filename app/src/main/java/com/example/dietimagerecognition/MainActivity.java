@@ -45,9 +45,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        View anotherLayout = getLayoutInflater().inflate(R.layout.activity_menu, null);
-
-        imageView = anotherLayout.findViewById(R.id.imageView);
+        /*View anotherLayout = getLayoutInflater().inflate(R.layout.activity_menu, null);
+        imageView = anotherLayout.findViewById(R.id.imageView);*/
         ImageButton camerabutton = findViewById(R.id.camerabutton);
         Button button = findViewById(R.id.button);
 
@@ -59,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        camerabutton.setOnClickListener(new View.OnClickListener() {
+        /*camerabutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 takePicture();
             }
-        });
+        });*/
 
         ImageButton gallerybutton = findViewById(R.id.gallerybutton);
         gallerybutton.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +80,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void takePicture(){
+    //deprecated 된거 해결한 코드
+   /* private final ActivityResultLauncher<Intent> cameraLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == RESULT_OK) {
+                    BitmapFactory.Options options = new BitmapFactory.Options();
+                    options.inSampleSize = 8;
+                    Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
+
+                    imageView.setImageBitmap(bitmap);
+                }
+            });*/
+
+    /*public void takePicture(){
         try {
             file = createFile();
             if (file.exists()) {
@@ -111,8 +122,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Main","File path : "+ outFile.getAbsolutePath());
 
         return outFile;
-    }
+    }*/
 
+    //이건 deprecated 되기전 코드
    /* @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode,resultCode,data);
@@ -126,16 +138,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }*/
 
-    private final ActivityResultLauncher<Intent> cameraLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
-            result -> {
-                if (result.getResultCode() == RESULT_OK) {
-                    BitmapFactory.Options options = new BitmapFactory.Options();
-                    options.inSampleSize = 8;
-                    Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath(), options);
-
-                    imageView.setImageBitmap(bitmap);
-                }
-            });
 
     public void openGallery() {
         Intent intent = new Intent();
