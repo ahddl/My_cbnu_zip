@@ -4,8 +4,8 @@
     <item>
         <shape android:shape="rectangle" >
             <stroke
-                android:width="5dp"
-                android:color="#673AB7" />	<!--테두리 색-->
+                android:width="3dp"
+                android:color="@color/pale_grey" />	<!--테두리 색-->
 
             <solid android:color="#FFFFFF" />	<!--배경 색-->
         </shape>

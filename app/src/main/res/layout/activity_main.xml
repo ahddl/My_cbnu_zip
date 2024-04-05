@@ -25,16 +25,39 @@
     </LinearLayout>
 
 
-    <Button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+    <ImageButton
         android:id="@+id/camerabutton"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:background="@drawable/baseline_photo_camera_24"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/btncorner"
+        android:src="@drawable/baseline_photo_camera_24"
         android:gravity="center"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         tools:layout_editor_absoluteX="160dp"
         tools:layout_editor_absoluteY="667dp" />
+
+    <ImageButton
+        android:id="@+id/gallerybutton"
+        android:layout_marginStart="30dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/btncorner"
+        android:src="@drawable/baseline_add_photo_alternate_24"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    </LinearLayout>
 
 
 
