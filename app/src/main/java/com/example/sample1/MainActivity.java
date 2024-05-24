@@ -102,6 +102,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //재촬영 or 갤러리 사진 다시 불러오기
+        if (getIntent().getBooleanExtra("showImageSourceDialog", false)) {
+            showImageSourceDialog();
+        }
     }
 
     private void showImageSourceDialog() {
@@ -171,3 +176,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+

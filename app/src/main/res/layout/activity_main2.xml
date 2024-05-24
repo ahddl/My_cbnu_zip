@@ -21,8 +21,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="인식한 메뉴가 맞습니까?"
-        android:textSize="18dp"
-        android:layout_marginBottom="30dp"/>
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:hint="날짜 시간"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:textColor="#9C27B0"/>
 
     <TextView
         android:id="@+id/outputmenu"
@@ -53,12 +62,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/dateTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="21dp"
-        android:hint="0000년 00월 00일 00시 00분" />
 
 
 </LinearLayout>
