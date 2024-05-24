@@ -16,7 +16,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -56,13 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK) {
-                        try {
-                            Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
-                            imageView.setImageBitmap(bitmap);
-                            startMainActivity2();
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
-                        }
+                        startMainActivity2(uri);
                     } else {
                         Toast.makeText(this, "사진을 찍지 않았습니다.", Toast.LENGTH_SHORT).show();
                     }
@@ -75,21 +68,13 @@ public class MainActivity extends AppCompatActivity {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
                         Uri selectedImageUri = result.getData().getData();
                         if (selectedImageUri != null) {
-                            try {
-                                InputStream inputStream = getContentResolver().openInputStream(selectedImageUri);
-                                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                                imageView.setImageBitmap(bitmap);
-                                startMainActivity2();
-                            } catch (FileNotFoundException e) {
-                                e.printStackTrace();
-                            }
+                            startMainActivity2(selectedImageUri);
                         }
                     } else {
                         Toast.makeText(this, "사진을 선택하지 않았습니다.", Toast.LENGTH_SHORT).show();
                     }
                 }
         );
-
 
         Button enterDietButton = findViewById(R.id.enterDiet);
         enterDietButton.setOnClickListener(new View.OnClickListener() {
@@ -99,38 +84,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //로딩화면: 사진 입력 후 모델 분석 때 시간 걸릴 때 사용하면 됨
         Button btnLoad = findViewById(R.id.btnload);
-        //로딩창 객체 생성
         customProgressDialog = new ProgressDialog(this);
-        //로딩창을 투명하게
         customProgressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
-        btnLoad.setOnClickListener(new Button.OnClickListener()
-        {
+        btnLoad.setOnClickListener(new Button.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                // 로딩창 보여주기
+            public void onClick(View v) {
                 customProgressDialog.show();
             }
         });
 
-       /* Button btncamera = findViewById(R.id.btncamera);
-        btncamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                takePicture();
-            }
-        });
-
-        Button btngallery = findViewById(R.id.btngallery);
-        btngallery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGallery();
-            }
-        });
-*/
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -191,25 +157,17 @@ public class MainActivity extends AppCompatActivity {
         pickGalleryLauncher.launch(intent);
     }
 
-    private void startMainActivity2() {
+    private void startMainActivity2(Uri imageUri) {
         Intent intent2 = new Intent(MainActivity.this, MainActivity2.class);
-        intent2.putExtra("imageUri", uri.toString());
+        intent2.putExtra("imageUri", imageUri.toString());
         startActivity(intent2);
     }
 
-    public class ProgressDialog extends Dialog
-    {
-        public ProgressDialog(Context context)
-        {
+    public class ProgressDialog extends Dialog {
+        public ProgressDialog(Context context) {
             super(context);
-            // 다이얼 로그 제목을 안보이게...
             requestWindowFeature(Window.FEATURE_NO_TITLE);
             setContentView(R.layout.dialog_progress);
         }
     }
-
-
-
-
-
 }
