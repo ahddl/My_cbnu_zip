@@ -45,6 +45,8 @@ public class MainActivity2 extends AppCompatActivity {
         //날짜 및 시간 출력
         setDateTime();
 
+        //사진을 통해 인식한 음식 이름 출력하기
+
         outputOk.setOnClickListener(v -> {
             String outputMenu = outputmenu.getText().toString();
             Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
