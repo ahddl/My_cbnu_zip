@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+<<<<<<< HEAD
+        applicationId "com.cookandroid.project4_2"
+=======
+<<<<<<< HEAD
+        applicationId "com.cookandroid.project4_1"
+=======
+<<<<<<< HEAD
+        applicationId "com.cookandroid.week4mission"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        applicationId "com.example.baseapp"
+=======
+        applicationId "com.example.hiandroid"
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
+=======
+        applicationId "com.example.hiandroid"
+=======
+        applicationId "com.example.myapplicationweek2"
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
+>>>>>>> b01832d05fbed150ad825cbde19cf4bc99b9aff5
+>>>>>>> 3540d41497c8a64cb6895da7196b042d9d0cbc34
+>>>>>>> 6e7807cdae8a3d17d21d7211f59176dfcd770ad4
+>>>>>>> c8428889a0ea65fa4eee364f31e7b3184243bc87
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

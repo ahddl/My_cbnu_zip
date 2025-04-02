@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
+    package="com.cookandroid.project4_2">
+=======
+<<<<<<< HEAD
+    package="com.cookandroid.project4_1">
+=======
+<<<<<<< HEAD
+    package="com.cookandroid.week4mission">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    package="com.example.baseapp">
+=======
+    package="com.example.helloandroid3">
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
+=======
+    package="com.example.helloandroid3">
+=======
+    package="com.example.myapplicationweek2">
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
+>>>>>>> b01832d05fbed150ad825cbde19cf4bc99b9aff5
+>>>>>>> 3540d41497c8a64cb6895da7196b042d9d0cbc34
+>>>>>>> 6e7807cdae8a3d17d21d7211f59176dfcd770ad4
+>>>>>>> c8428889a0ea65fa4eee364f31e7b3184243bc87
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c8428889a0ea65fa4eee364f31e7b3184243bc87
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:name=".MainActivity"
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Week4mission">
+        <activity
+            android:name=".MainActivity"
+=======
+<<<<<<< HEAD
+        android:label="@string/app_name"
+=======
+        android:label="좀 그럴듯한 앱"
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+<<<<<<< HEAD
+<<<<<<< HEAD
+            android:name=".MainActivity"
+=======
+            android:name="com.example.hiandroid.MainActivity"
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
+=======
+            android:name="com.example.hiandroid.MainActivity"
+=======
+            android:name=".MainActivity"
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
+>>>>>>> b01832d05fbed150ad825cbde19cf4bc99b9aff5
+>>>>>>> 3540d41497c8a64cb6895da7196b042d9d0cbc34
+>>>>>>> 6e7807cdae8a3d17d21d7211f59176dfcd770ad4
+>>>>>>> c8428889a0ea65fa4eee364f31e7b3184243bc87
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

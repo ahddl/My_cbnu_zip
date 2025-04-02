@@ -1,0 +1,39 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+<<<<<<< HEAD
+rootProject.name = "Project4_2"
+=======
+<<<<<<< HEAD
+rootProject.name = "Project4_1"
+=======
+<<<<<<< HEAD
+rootProject.name = "week4mission"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+rootProject.name = "BaseApp"
+=======
+rootProject.name = "HiAndroid"
+>>>>>>> 577db456c1b43a61d9718c9ed83c6edb9d35c5ec
+=======
+rootProject.name = "HiAndroid"
+=======
+rootProject.name = "My Applicationweek2"
+>>>>>>> b33389b61de584b68f90ac5416960403b81c619e
+>>>>>>> b01832d05fbed150ad825cbde19cf4bc99b9aff5
+>>>>>>> 3540d41497c8a64cb6895da7196b042d9d0cbc34
+>>>>>>> 6e7807cdae8a3d17d21d7211f59176dfcd770ad4
+>>>>>>> c8428889a0ea65fa4eee364f31e7b3184243bc87
+include ':app'
