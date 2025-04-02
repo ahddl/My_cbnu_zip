@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tip5_2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="15dp"
+        android:text="졸음운전은 혈중알코올 농도 0.17%의 만취상태에서 하는 음주운전과 같아 굉장히 위험합니다. " />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="390dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tip5_1"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="10dp"
+        android:text="(출처-한국교통안전공단)" />
+
+
+</LinearLayout>

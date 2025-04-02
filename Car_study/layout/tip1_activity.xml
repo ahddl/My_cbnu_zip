@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="15dp"
+        android:text="대한민국에 등록된 차량은 모두 정기 검사 대상입니다.
+        \n하지만 차량의 종류에 따라 정기검사 주기가 다릅니다.
+        \n자세한 차량별 정기 검사 주기는 아래의 표와 같습니다." />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="390dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tip1_1"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="10dp"
+        android:text="(출처-한국교통안전공단)" />
+
+
+
+</LinearLayout>
