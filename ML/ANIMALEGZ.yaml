@@ -1,0 +1,8 @@
+names:
+- Elephant
+- Giraffe
+- Zebra
+nc: 3
+test: /content/ANIMALEGZ/test/images
+train: /content/ANIMALEGZ/train/images/
+val: /content/ANIMALEGZ/valid/images/
