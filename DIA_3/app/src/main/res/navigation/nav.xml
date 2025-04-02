@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/diet">
+
+    <fragment
+        android:id="@+id/chatbot"
+        android:name="com.example.dia_v102.Chatbot"
+        android:label="activity_chatbot"
+        tools:layout="@layout/activity_chatbot" />
+    <fragment
+        android:id="@+id/bloodsugarLog"
+        android:name="com.example.dia_v102.Diabetes"
+        android:label="activity_bloodsugar_log"
+        tools:layout="@layout/activity_diabetes" />
+    <fragment
+        android:id="@+id/calendar"
+        android:name="com.example.dia_v102.Calendar"
+        android:label="activity_calendar"
+        tools:layout="@layout/activity_calendar" />
+    <fragment
+        android:id="@+id/diet"
+        android:name="com.example.dia_v102.Diet"
+        android:label="activity_diet"
+        tools:layout="@layout/activity_diet" />
+    <fragment
+        android:id="@+id/graph"
+        android:name="com.example.dia_v102.Graph"
+        android:label="activity_settings"
+        tools:layout="@layout/activity_graph" />
+
+</navigation>
