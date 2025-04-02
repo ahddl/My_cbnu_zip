@@ -1,0 +1,165 @@
+ANIMALMJ
+
+!wget -O ANIMALMJ.zip https://universe.roboflow.com/ds/qY6T0Dme0U?key=JnUKUBXuMS
+
+import zipfile
+
+with zipfile.ZipFile('/content/ANIMALMJ.zip') as target_file:
+
+    target_file.extractall('/content/ANIMALMJ/')
+
+
+!cat /content/ANIMALMJ/data.yaml
+
+!pip install PyYAML
+
+# yaml 파일을 학습이 가능하도록 경로 설정.
+# key-value 데이터인 dict 데이터타입으로 data['train'], data['val'], data['nc'], data['names'] 에 넣어주는데,
+# 가장 중요한 부분은 데이터 경로 설정임.
+
+import yaml
+
+data = { 'train' : '/content/ANIMALMJ/train/images/',
+         'val' : '/content/ANIMALMJ/valid/images/',
+         'test' : '/content/ANIMALMJ/test/images',
+         'names' : ['elephant', 'giraffe', 'rion', 'zebra'],
+         'nc' : 4 }
+with open('/content/ANIMALMJ/ANIMALMJ.yaml', 'w') as f:
+  yaml.dump(data, f)
+
+
+with open('/content/ANIMALMJ/ANIMALMJ.yaml', 'r') as f:
+  animalmj_yaml = yaml.safe_load(f)
+  display(animalmj_yaml)
+
+!cat /content/ANIMALMJ/ANIMALMJ.yaml
+
+# Google Colab 환경에서 YOLOv8 설치
+!pip install ultralytics
+
+import ultralytics
+
+ultralytics.checks()
+
+print(type(model.names), len(model.names))
+
+print(model.names)
+
+
+model.train(data='/content/ANIMALMJ/ANIMALMJ.yaml', epochs=20, patience=10, batch=32, imgsz=416) 
+
+print(type(model.names), len(model.names))
+
+print(model.names)
+
+# 테스트 이미지
+
+from glob import glob
+
+test_image_list = glob('/content/ANIMALMJ/test/images/*')
+
+print(len(test_image_list))
+
+test_image_list.sort()
+
+
+for i in range(len(test_image_list)):
+
+    print('i = ',i, test_image_list[i])
+
+import cv2
+from google.colab.patches import cv2_imshow
+from ultralytics import YOLO
+
+
+# 클래스별 색상 정의
+class_colors = {
+    'elephant': (0, 0, 255),  # 빨간색
+    'giraffe': (0, 255, 0),  # 녹색
+    'zebra': (255, 0, 0)  # 파란색
+}
+
+# 이미지 로드
+image_path = '/content/testimage.jpg'  # 테스트할 이미지 경로
+img = cv2.imread(image_path)
+
+# YOLOv8 모델 추론
+results = model(img)
+
+# 경계 상자 및 라벨 그리기
+for result in results:
+    for box in result.boxes:
+        x1, y1, x2, y2 = map(int, box.xyxy[0])  # 바운딩 박스 좌표
+        label = int(box.cls)  # 클래스 라벨
+        confidence = box.conf.item()  # 신뢰도
+        class_name = model.names[label]  # 클래스 이름
+        color = class_colors.get(class_name, (0, 255, 255))  # 클래스 색상 선택, 기본값은 노란색
+        cv2.rectangle(img, (x1, y1), (x2, y2), color, 2)
+        cv2.putText(img, f'{class_name} {confidence:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
+
+# 결과 이미지 표시
+cv2_imshow(img)
+
+# 결과 이미지 저장
+output_image_path = 'output_image.jpg'
+cv2.imwrite(output_image_path, img)
+
+import cv2
+from google.colab.patches import cv2_imshow
+
+
+# 클래스별 색상 정의
+class_colors = {
+    'elephant': (0, 0, 255),  # 빨간색
+    'giraffe': (0, 255, 0),  # 녹색
+    'zebra': (255, 0, 0)  # 파란색
+}
+
+# 비디오 파일 경로 또는 웹캠 사용(0)
+video_path = '/content/testvideo.mp4'
+cap = cv2.VideoCapture(video_path)
+
+# 출력 비디오 설정
+output_path = 'output_testvideo.mp4'
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+fps = 30.0  # 비디오 FPS
+width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+    
+    # YOLOv8 모델 추론
+    results = model(frame)
+    
+    # 경계 상자 및 라벨 그리기
+    for result in results:
+        for box in result.boxes:
+            x1, y1, x2, y2 = map(int, box.xyxy[0])  # 바운딩 박스 좌표
+            label = int(box.cls)  # 클래스 라벨
+            confidence = box.conf.item()  # 신뢰도
+            class_name = model.names[label]  # 클래스 이름
+            color = class_colors.get(class_name, (0, 255, 255))  # 클래스 색상 선택, 기본값은 노란색
+            cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
+            cv2.putText(frame, f'{class_name} {confidence:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
+    
+    # 프레임 표시
+    cv2_imshow(frame)
+    
+    # 출력 비디오에 프레임 쓰기
+    out.write(frame)
+    
+    # 비디오 파일의 경우 'q' 키를 눌러 루프를 종료
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# 작업이 완료되면 모든 자원 해제
+cap.release()
+out.release()
+cv2.destroyAllWindows()
+
+# 이 코드를 실행하면 출력 비디오가 현재 디렉토리에 'output_video.mp4'로 저장됩니다.
+
